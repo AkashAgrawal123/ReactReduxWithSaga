@@ -4,7 +4,7 @@ import Header from "./Components/Header";
 import Homepage from "./Components/Homepage";
 import CartItem from "./Components/CartItem";
 import { Provider } from "react-redux";
-import store from "./Store";
+import store from './Store';
 
 const App = () => {
   return (
