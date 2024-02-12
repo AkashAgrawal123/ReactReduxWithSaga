@@ -1,11 +1,14 @@
-import { PRODUCT_LIST } from "../Constant/PRODUCT_LIST";
+import { SEARCH_PRODUCT, PRODUCT_LIST } from "../Constant";
 
 export const productList = () => {
-  let data = "hello";
-
-  console.log("data", data);
   return {
     type: PRODUCT_LIST,
-    data,
+  };
+};
+
+export const searchProduct = (query) => {
+  return {
+    type: SEARCH_PRODUCT,
+    query,
   };
 };

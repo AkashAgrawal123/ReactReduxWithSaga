@@ -1,5 +1,12 @@
 .homepage {
   margin: 16px 40px;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
   &__cart--empty {
     margin-bottom: 16px;
 

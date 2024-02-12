@@ -2,11 +2,14 @@ import React from "react";
 import { TbShoppingCart } from "react-icons/tb";
 import "../Styles/Header.scss";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { searchProduct } from "../Services/Action/ProductAction";
 
 const Header = () => {
   const cartItemCount = useSelector((state) => state.cartData);
-  console.log(cartItemCount, 'cartItemCount');
+  console.log(cartItemCount, "cartItemCount");
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -22,6 +25,7 @@ const Header = () => {
               className="header__input"
               type="text"
               placeholder="Search item..."
+              onChange={(event) => dispatch(searchProduct(event.target.value))}
             />
             <NavLink to="/cart-item">
               <div className="header__cart">
